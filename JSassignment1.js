@@ -4,7 +4,7 @@ year % 4 == 0 && year % 400 == 0
   ? console.log(`${year} is leap year`)
   : console.log(`${year} is not leap year`);
 
-//celsius to Fahrenheit.
+//celsius to Fahrenheit and vice-versa
 ctof = 60;
 ftoc = 45;
 f = ctof * 1.8 + 32;
