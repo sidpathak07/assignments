@@ -18,4 +18,4 @@ let ans = 1;
 for (i = 2; i <= n; i++) {
   ans = ans * i;
 }
-console.log(ans);
+console.log(`factorial of ${n} is ${ans}`);
