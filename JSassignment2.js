@@ -1,36 +1,48 @@
 // check triangle is equilateral,isosceles,scalene
-let a = 8,
-  b = 9,
-  c = 7;
-if (a == b && b == c && a == c) {
-  console.log("Triangle is Equilateral Triangle");
-}
-if ((a == b && a != c && b != c) || (a == c && a != b && c != b)) {
-  console.log("Triangle is Isosceles Triangle");
-}
-if (a != b && b != c && a != c) {
-  console.log("Triangle is Scalene Triangle");
+function triangleCheck(a, b, c) {
+  if (a == b && b == c && a == c) {
+    console.log("Triangle is Equilateral Triangle");
+  }
+  if ((a == b && a != c && b != c) || (a == c && a != b && c != b)) {
+    console.log("Triangle is Isosceles Triangle");
+  }
+  if (a != b && b != c && a != c) {
+    console.log("Triangle is Scalene Triangle");
+  }
 }
 
+triangleCheck(8, 9, 7);
+
 //Marks
-let marks = 68;
-if (marks >= 90 && marks <= 100) {
-  console.log("S Grade");
-} else if (marks >= 80 && marks < 90) {
-  console.log("A Grade");
-} else if (marks >= 70 && marks < 80) {
-  console.log("B Grade");
-} else if (marks >= 60 && marks < 70) {
-  console.log("C Grade");
-} else if (marks >= 50 && marks < 60) {
-  console.log("D Grade");
-} else if (marks >= 40 && marks < 50) {
-  console.log("E Grade");
-} else if (marks >= 0 && marks < 40) {
-  console.log("Student has failed");
-} else {
-  console.log("Invalid Marks");
+function markcheck(marks) {
+  switch (true) {
+    case marks >= 90 && marks <= 100:
+      console.log("S Grade");
+      break;
+    case marks >= 80 && marks < 90:
+      console.log("A Grade");
+      break;
+    case marks >= 70 && marks < 80:
+      console.log("B Grade");
+      break;
+    case marks >= 60 && marks < 70:
+      console.log("C Grade");
+      break;
+    case marks >= 50 && marks < 60:
+      console.log("D Grade");
+      break;
+    case marks >= 40 && marks < 50:
+      console.log("E Grade");
+      break;
+    case marks >= 0 && marks < 40:
+      console.log("Student has failed");
+      break;
+    default:
+      console.log("Invalid marks");
+  }
 }
+
+markcheck(10);
 
 //sum of multiples of 3 and 5
 let three = [],
@@ -61,7 +73,7 @@ function prime(m, n) {
         for (let k = 1; k <= i; k++) {
           total *= k;
         }
-        console.log(total, i);
+        console.log(i, total);
       }
     }
   }
